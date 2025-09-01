@@ -1,2 +1,3 @@
 # jsmyth00.github.io
-website
+website for justin smyth 
+automation and industrial engineer 
