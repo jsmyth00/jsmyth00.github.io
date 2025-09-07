@@ -10,13 +10,24 @@
       color: black;
       font-family: "Lucida Console", Monaco, monospace;
       margin: 0;
-      padding: 30px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh; /* makes it vertically centered */
+      text-align: center;
     }
-    header {
-      text-align: left;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
     h1 {
       font-size: 3.5em;
+      margin: 0;
+    }
+    h2 {
       margin: 0 0 20px 0;
     }
     nav {
@@ -35,7 +46,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>Justin Smyth</h1>
     <h2>Industrial & Automation Engineer</h2>
     <nav>
@@ -44,7 +55,6 @@
       <a href="education/">Education</a>
       <a href="about/">About</a>
     </nav>
-  </header>
+  </div>
 </body>
 </html>
-
