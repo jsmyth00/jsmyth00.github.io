@@ -57,7 +57,34 @@
       <a href="about/">About</a>
     </nav>
   </div>
+
+  <div class="age-counter" id="ageCounter"></div>
+
+  <script>
+    function updateAge() {
+      // Your birthday: April 23, 2000
+      const birthDate = new Date("2000-04-23T00:00:00");
+      const today = new Date();
+
+      // Calculate difference in ms
+      const diffMs = today - birthDate;
+
+      // Convert to total days
+      const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // Calculate years and remaining days
+      const years = Math.floor(totalDays / 365.25);
+      const days = Math.floor(totalDays - years * 365.25);
+
+      document.getElementById("ageCounter").textContent =
+        `Current Age: ${years} years ${days} days`;
+    }
+
+    updateAge();
+    setInterval(updateAge, 86400000); // Update once per day
+  </script>
 </body>
 </html>
+
 
 
