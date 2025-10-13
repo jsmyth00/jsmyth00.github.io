@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: "Lucida Console", Monaco, monospace;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      line-height: 1.5em;
+    }
+    h1, h2 {
+      margin-top: 1.2em;
+      margin-bottom: 0.6em;
+    }
+    h1 { font-size: 2em; text-align: center; }
+    h2 { font-size: 1.3em; }
+    p { margin: 0.6em 0; }
+    a { color: black; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back {
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .section { margin-top: 1.2em; }
+    .muted { opacity: 0.9; }
+    .divider {
+      height: 1px;
+      background: #000;
+      margin: 20px 0;
+    }
+    .inline-list { margin: 0.4em 0; }
+    .inline-list span::after { content: " • "; }
+    .inline-list span:last-child::after { content: ""; }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>About</h1>
+
+    <!-- Intro (persona tone) -->
+    <section class="section" aria-labelledby="intro">
+      <h2 id="intro">Hi, I'm Justin.</h2>
+      <p class="muted">
+        Hi! This is the webpage for Justin Smyth. I am an engineer from Pennsylvania, USA. 
+        I studied Mechanical Engineering and have always enjoyed learning how things work and how to make them better.
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- What drives me / values -->
+    <section class="section" aria-labelledby="values">
+      <h2 id="values">What drives me</h2>
+      <p>
+        Curiosity, systems thinking, efficiency, impact, and collaboration — values that guide how I approach both work and life. 
+        I am interested in automation, large-scale problem solving, process improvement, and manufacturing efficiency.
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- What I’m working toward -->
+    <section class="section" aria-labelledby="toward">
+      <h2 id="toward">What I’m working toward</h2>
+      <p>
+        I am currently an automation engineer leading an Optimization program that delivers exceptional results and great value 
+        to some of the world’s largest material handling systems across the United States. 
+        My focus is on leading programs that connect technical systems with operational outcomes.
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- Outside of work / personal touch -->
+    <section class="section" aria-labelledby="personal">
+      <h2 id="personal">Outside of work</h2>
+      <p>
+        Outside of work, I focus on maintaining my health through running, lifting, and cycling. 
+        I enjoy traveling across the world with my girlfriend, Lauren, and exploring new cultures and places. 
+        I also spend a lot of time researching investments — from the stock market to real estate — 
+        always looking for new ways to learn and grow.
+      </p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- Contact / links -->
+    <section class="section" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p>
+        You can contact me below:
+      </p>
+      <p>
+        📧 <a href="mailto:justinsmyth423@gmail.com">justinsmyth423@gmail.com</a><br>
+        📞 six-one-zero-seven-seven-two-zero-nine-four-eight
+      </p>
+      <p class="inline-list">
+        <span><a href="/resume.pdf">Resume</a></span>
+        <span><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></span>
+      </p>
+    </section>
+
+    <!-- Same exact back button -->
+    <a class="back" href="/">← Back to Home</a>
+  </main>
+</body>
+</html>
 
