@@ -43,11 +43,12 @@
       align-items: center;
       padding: 10px 0;
     }
-    .logo {
+   .logo {
+  display: block;
+  margin: 0 auto 8px auto;  /* centers and adds a bit of space below */
   width: auto;
   height: auto;
-  max-width: 120px;   
-  max-height: 120px;
+  max-width: 140px;   /* try 120–160px range for best proportion */
   object-fit: contain;
 }
     .meta {
@@ -83,11 +84,12 @@
       <div class="edu-card">
         <!-- Replace src below with your actual logo path -->
         <img class="logo" src="assets/img/YCP_Logo_small.png" alt="York College of Pennsylvania logo">
-        <div>
-          <h2 id="degree">Bachelor of Science - Mechanical Engineering</h2>
-          <p><strong>York College of Pennsylvania</strong></p>
-          <p class="meta">Aug 2018 – Aug 2022 • York, PA</p>
-        </div>
+       <div style="text-align:center;">
+  <img class="logo" src="assets/img/YCP_Logo.png" alt="York College of Pennsylvania logo">
+  <h2>Bachelor of Science — Mechanical Engineering</h2>
+  <p><strong>York College of Pennsylvania</strong></p>
+  <p class="meta">Aug 2018 – Aug 2022 • York, PA</p>
+</div>
       </div>
     </section>
 
