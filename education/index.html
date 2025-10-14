@@ -14,86 +14,106 @@
       justify-content: center;
       padding: 40px 20px;
     }
+
     .container {
       max-width: 1000px;
       width: 100%;
       line-height: 1.5em;
     }
+
     h1, h2, h3 {
       margin-top: 1.2em;
       margin-bottom: 0.6em;
     }
-    h1 { font-size: 2em; text-align: center; }
-    h2 { font-size: 1.5em; }
-    h3 { font-size: 1.2em; }
-    p { margin: 0.6em 0; }
-    a { color: black; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    p {
+      margin: 0.6em 0;
+      text-align: center;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .back {
       display: block;
       margin-top: 40px;
       text-align: center;
     }
 
-
-    .edu-card {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 10px 0;
-    }
-   .logo {
-  display: block;
-  margin: 0 auto 8px auto;  /* centers and adds a bit of space below */
-  width: auto;
-  height: auto;
-  max-width: 140px;   /* try 120–160px range for best proportion */
-  object-fit: contain;
-}
-    .meta {
-      margin-top: 4px;
-      opacity: 0.9;
-    }
-
-  
     .divider {
       height: 1px;
       background: #000;
       opacity: 0.8;
       margin: 24px 0;
     }
+
+    .logo {
+      display: block;
+      margin: 0 auto 8px auto;
+      max-width: 140px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .meta {
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    /* Coursework styling */
     .course-list {
       column-count: 1;
       column-gap: 24px;
       margin-left: 20px;
     }
+
     .course-list li {
       break-inside: avoid;
       margin: 4px 0;
     }
+
     @media (min-width: 700px) {
-      .course-list { column-count: 2; }
+      .course-list {
+        column-count: 2;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Education</h1>
-    <section aria-labelledby="degree">
-      <div class="edu-card">
-        <!-- Replace src below with your actual logo path -->
-        <img class="logo" src="assets/img/YCP_Logo_small.png" alt="York College of Pennsylvania logo">
-       <div style="text-align:center;">
-  <img class="logo" src="assets/img/YCP_Logo.png" alt="York College of Pennsylvania logo">
-  <h2>Bachelor of Science — Mechanical Engineering</h2>
-  <p><strong>York College of Pennsylvania</strong></p>
-  <p class="meta">Aug 2018 – Aug 2022 • York, PA</p>
-</div>
-      </div>
+
+    <!-- Degree block -->
+    <section aria-labelledby="degree" style="text-align:center; margin-top:8px;">
+      <img class="logo" src="assets/img/YCP_Logo_small.png" alt="York College of Pennsylvania logo">
+      <h2 id="degree">Bachelor of Science — Mechanical Engineering</h2>
+      <p><strong>York College of Pennsylvania</strong></p>
+      <p class="meta">Aug 2018 – Aug 2022 • York, PA</p>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
+
+    <!-- Coursework -->
     <section aria-labelledby="coursework">
       <h3 id="coursework">Coursework</h3>
       <ul class="course-list">
@@ -109,7 +129,18 @@
         <li>Formula SAE</li>
       </ul>
     </section>
+
     <div class="divider" aria-hidden="true"></div>
+
+    <!-- Activities -->
+    <section aria-labelledby="activities">
+      <h3 id="activities">Projects & Activities</h3>
+      <p>
+        Hands-on design and testing through labs and team-based projects, including Formula SAE participation and applied mechatronics work.
+      </p>
+    </section>
+
+    <!-- Back to Home -->
     <a class="back" href="/">← Back to Home</a>
   </div>
 </body>
