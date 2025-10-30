@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples of Excellence — Justin Smyth</title>
   <style>
-    body {
-      background-color: white;
-      color: black;
-      font-family: "Lucida Console", Monaco, monospace;
+    :root {
+      --bg: #ffffff;
+      --fg: #000000;
+      --muted: #666666;
+      --line: #e5e5e5;
+    }
+    html, body {
       margin: 0;
-      padding: 30px;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Lucida Console", Monaco, monospace;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
     }
     h1 {
-      font-size: 3em;
+      font-size: 42px;
+      margin: 12px 0 4px;
+      letter-spacing: 0.5px;
     }
-    a {
-      font-size: 1.2em;
-      color: black;
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 0;
+    }
+    .intro, .card {
+      text-align: left;
+      line-height: 1.55;
+      max-width: 820px;
+    }
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .muted { color: var(--muted); }
+    .back {
+      margin-top: 28px;
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
       text-decoration: none;
+      color: var(--fg);
+      cursor: pointer;
+      user-select: none;
     }
-    a:hover {
-      text-decoration: underline;
+    .back:hover {
+      background: #f5f5f5;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
     }
   </style>
 </head>
 <body>
-  <h1>Examples of Excellence</h1>
-  <p>Eventually some examples of my engineering work in field will go here. please look forward to this soon!</p>
+  <main class="container">
+    <h1>Examples of Excellence</h1>
+    <p class="subtitle">Selected outcomes from high-impact automation recoveries</p>
 
-  <nav>
-    <a href="projects/">Go to Projects Page</a>
-  </nav>
+    <section class="intro">
+      <p>
+        As an Emergency Automation Support Engineer, Justin has supported operations at over <strong>100 Amazon Fulfillment Centers</strong> across the United States. During each high-impact event, he quickly stabilized production, coordinated with the right stakeholders, led detailed root-cause analyses, and ensured that lessons learned were clearly communicated to improve site operations and maintenance teams.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Performance Improvement at Amazon Fulfillment Center</h2>
+      <p>
+        At one Amazon Fulfillment Center, a detailed performance review revealed significant reductions in system jams and defect rates while overall throughput increased. By Week 17, total jams had dropped to <strong>10,960</strong> — a <strong>36.5%</strong> decrease compared to Week 8. DPMO improved to <strong>1,870</strong> in Week 17, representing a <strong>43.1%</strong> reduction from Week 3.
+      </p>
+      <p>
+        What makes this improvement especially notable is that these results occurred during periods of higher operational demand. For example, Week 14 saw a <strong>26.8%</strong> increase in building volume compared to Week 8, yet jams were <strong>15.3%</strong> lower. Comparing the peak jamming week (Week 8) to the latest data (Week 17), volume rose by <strong>11.7%</strong> while jams declined by <strong>36.5%</strong>.
+      </p>
+      <p>
+        These results demonstrate the effectiveness of continuous process optimization and collaboration between engineering, maintenance, and operations teams — reinforcing the value of rapid analysis, targeted adjustments, and strong communication across all levels.
+      </p>
+    </section>
+
+    <a class="back" href="/">← Back to Home</a>
+  </main>
 </body>
 </html>
