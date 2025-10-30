@@ -25,7 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 40px;
       text-align: center;
     }
     h1 {
@@ -38,16 +38,15 @@
       font-size: 14px;
       margin-top: 0;
     }
-    .intro, .card {
+    section {
       text-align: left;
-      line-height: 1.55;
+      line-height: 1.6;
       max-width: 820px;
     }
-    .card h2 {
+    h2 {
       font-size: 22px;
       margin-bottom: 8px;
     }
-    .muted { color: var(--muted); }
     .back {
       margin-top: 28px;
       display: inline-block;
@@ -59,9 +58,7 @@
       cursor: pointer;
       user-select: none;
     }
-    .back:hover {
-      background: #f5f5f5;
-    }
+    .back:hover { background: #f5f5f5; }
     @media (max-width: 600px) {
       h1 { font-size: 32px; }
     }
@@ -72,22 +69,66 @@
     <h1>Examples of Excellence</h1>
     <p class="subtitle">Selected outcomes from high-impact automation recoveries</p>
 
-    <section class="intro">
+    <section>
       <p>
         As an Emergency Automation Support Engineer, Justin has supported operations at over <strong>100 Amazon Fulfillment Centers</strong> across the United States. During each high-impact event, he quickly stabilized production, coordinated with the right stakeholders, led detailed root-cause analyses, and ensured that lessons learned were clearly communicated to improve site operations and maintenance teams.
       </p>
     </section>
 
-    <section class="card">
+    <section>
       <h2>Performance Improvement at Amazon Fulfillment Center</h2>
       <p>
         At one Amazon Fulfillment Center, a detailed performance review revealed significant reductions in system jams and defect rates while overall throughput increased. By Week 17, total jams had dropped to <strong>10,960</strong> — a <strong>36.5%</strong> decrease compared to Week 8. DPMO improved to <strong>1,870</strong> in Week 17, representing a <strong>43.1%</strong> reduction from Week 3.
+        What makes this improvement especially notable is that these results occurred during periods of higher operational demand. For example, Week 14 saw a <strong>26.8%</strong> increase in building volume compared to Week 8, yet jams were <strong>15.3%</strong> lower. Comparing the peak jamming week (Week 8) to the latest data (Week 17), volume rose by <strong>11.7%</strong> while jams declined by <strong>36.5%</strong>. These results demonstrate the effectiveness of continuous process optimization and collaboration between engineering, maintenance, and operations teams — reinforcing the value of rapid analysis, targeted adjustments, and strong communication across all levels.
       </p>
+    </section>
+
+    <section>
+      <h2>Sorter-Wide Tracking Jams Due to Electrical Interference</h2>
       <p>
-        What makes this improvement especially notable is that these results occurred during periods of higher operational demand. For example, Week 14 saw a <strong>26.8%</strong> increase in building volume compared to Week 8, yet jams were <strong>15.3%</strong> lower. Comparing the peak jamming week (Week 8) to the latest data (Week 17), volume rose by <strong>11.7%</strong> while jams declined by <strong>36.5%</strong>.
+        A FlexSort sorter experienced repeated building-wide stoppages caused by false package signals that triggered system tracking jams. The downtime impacted multiple sort lanes and delayed outbound flow across the entire operation. Justin traced the issue to an ungrounded 480V servo cable that was inducing electrical noise into low-voltage photoeye circuits. By grounding the cable and retraining sensors, the site restored full operational stability. The root cause was improper cable shielding and grounding during installation. Preventive measures were introduced to verify servo grounding and shielding integrity during future deployments.
       </p>
+    </section>
+
+    <section>
+      <h2>Building-Wide Mis-Diverts After Server Replacement</h2>
       <p>
-        These results demonstrate the effectiveness of continuous process optimization and collaboration between engineering, maintenance, and operations teams — reinforcing the value of rapid analysis, targeted adjustments, and strong communication across all levels.
+        After a server replacement, a facility experienced widespread mis-diverts where pick modules routed packages to incorrect zones. The misconfiguration disrupted warehouse flow and halted order processing. Justin collaborated with IT and software engineers to identify that the “pick-to-voice” feature had not been re-enabled following the new server installation. Once the setting was restored and barcode scanners were realigned, all modules resumed normal operation. The issue stemmed from an unverified post-upgrade configuration, and Justin implemented a server validation checklist to ensure all WMS-to-sorter settings are confirmed before go-live.
+      </p>
+    </section>
+
+    <section>
+      <h2>Network Instability Across Crane Systems</h2>
+      <p>
+        A site experienced intermittent communication loss across multiple cranes tied to a shared Master #1 network. The instability resulted in production delays and operational safety risks due to unresponsive automation zones. Justin conducted a network diagnostic and pinpointed a failing industrial switch that caused recurring packet loss. The faulty switch was replaced, restoring stable communication across all devices. The issue originated from hardware degradation, and a preventive maintenance plan was established for quarterly network health checks and redundant switch paths.
+      </p>
+    </section>
+
+    <section>
+      <h2>Multi-Zone Merge Jam Escalation</h2>
+      <p>
+        Multiple merge and ECC zones were simultaneously jamming due to mismatched acceleration and braking parameters. The misalignment slowed throughput and increased jam frequency across several subsystems. Justin analyzed the PLC zone configurations, synchronized acceleration profiles, and trained the on-site controls team on parameter tuning best practices. The event highlighted the need for better consistency between mechanical tuning and controls configuration, leading to the creation of a zone-by-zone validation checklist used at startup.
+      </p>
+    </section>
+
+    <section>
+      <h2>System-Wide Photoeye Signal Instability</h2>
+      <p>
+        Throughout an entire sortation system, photoeyes were intermittently flickering and generating false readings, halting multiple zones. Justin traced the anomaly to a power supply outputting 29VDC without a proper DC ground reference. By replacing and grounding the supply, sensor readings stabilized and false stops ceased. The root cause was an ungrounded DC circuit producing unstable voltage levels. A preventive measure was introduced requiring ground verification during every preventive maintenance inspection.
+      </p>
+    </section>
+
+    <section>
+      <h2>Site-Wide Instability Post-Launch</h2>
+      <p>
+        A newly launched fulfillment site faced persistent throughput losses and frequent automation faults during its initial weeks of operation. Justin led a full-system triage effort, covering mechanical alignment, PLC logic, and software coordination. After prioritizing high-impact bottlenecks and refining control logic, throughput stabilized and alarms were significantly reduced. The underlying cause was inconsistent commissioning standards across subsystems. A post-launch validation checklist was created to confirm full functional readiness before operational handoff.
+      </p>
+    </section>
+
+    <section>
+      <h2>Building-Level Jam and DPMO Reduction</h2>
+      <p>
+        At a large fulfillment center, high jam rates and defect levels were restricting building throughput. Over several weeks, Justin implemented a targeted improvement plan focusing on control logic optimization, operator retraining, and data-driven issue prioritization. By Week 17, total jams dropped to <strong>10,960</strong> (−36.5%) and DPMO improved to <strong>1,870</strong> (−43.1%), even as building volume increased by over 10%. This initiative demonstrated how structured data review, disciplined tuning, and team alignment can yield measurable operational improvements.
       </p>
     </section>
 
