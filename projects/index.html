@@ -1,37 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Justin Smyth</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
   <style>
-    body {
-      background-color: white;
-      color: black;
-      font-family: "Lucida Console", Monaco, monospace;
+    :root {
+      --bg: #ffffff;
+      --fg: #000000;
+      --muted: #666666;
+      --line: #e5e5e5;
+    }
+    html, body {
       margin: 0;
-      padding: 30px;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Lucida Console", Monaco, monospace;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
     }
     h1 {
-      font-size: 3em;
+      font-size: 42px;
+      margin: 12px 0 4px;
+      letter-spacing: 0.5px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 0;
+    }
+    section {
+      text-align: left;
+      line-height: 1.6;
+      max-width: 820px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
     }
     a {
-      font-size: 1.2em;
-      color: black;
-      text-decoration: none;
+      color: var(--fg);
     }
     a:hover {
       text-decoration: underline;
     }
+    .back {
+      margin-top: 28px;
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--fg);
+      cursor: pointer;
+      user-select: none;
+    }
+    .back:hover { background: #f5f5f5; }
+    .back:visited { color: var(--fg); }
+    .back:active { transform: translateY(1px); }
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to my test site</h1>
-  <p>This is just a simple test homepage to make sure links work.</p>
+  <main class="container">
+    <h1>Projects</h1>
+    <p class="subtitle">Selected engineering and optimization initiatives</p>
 
-  <nav>
-    <a href="projects/">Go to Projects Page</a>
-  </nav>
+    <section>
+      <h2>Critical Path Optimization (CPO) Program</h2>
+      <p>
+        As a Lead Automation Engineer, Justin developed and deployed a comprehensive <strong>Critical Path Optimization (CPO)</strong> program on behalf of his company’s largest customer. This program unified system performance analysis, jam data analytics, and PLC parameter tuning across dozens of facilities nationwide. Justin worked directly with operations, maintenance, and controls teams to identify throughput constraints, verify controls logic consistency, and ensure that both short-term fixes and long-term process changes were implemented effectively. The initiative has since become a repeatable consulting framework used to drive measurable improvements in reliability, efficiency, and throughput across large-scale fulfillment centers.
+      </p>
+    </section>
+
+    <section>
+      <h2>LLM-Powered Service Report Chatbot</h2>
+      <p>
+        Justin designed and implemented an internal <strong>Large Language Model (LLM)</strong> chatbot powered by the <strong>OpenAI API</strong> to assist engineers in quickly referencing insights from over <strong>2,000+ service reports</strong>. Using Python, embeddings, and a FAISS vector database, the system enables natural-language querying of historical reports to identify past resolutions, failure trends, and best practices. This tool significantly reduced research time for recurring issues and allowed on-site engineers to make faster, data-driven troubleshooting decisions. The project showcases Justin’s ability to integrate cutting-edge AI tools into practical engineering workflows, blending automation expertise with modern data analysis techniques.
+      </p>
+    </section>
+
+    <section>
+      <h2>York College of Pennsylvania Formula SAE — Suspension Design Team</h2>
+      <p>
+        For his senior capstone at York College of Pennsylvania, Justin served on the <strong>Suspension Design Team</strong> for the school’s <strong>Formula SAE (FSAE)</strong> racing program, <em>YCP Racing</em>. His responsibilities included geometry optimization, kinematic analysis, and the integration of custom-machined control arms into the chassis assembly. He contributed to data collection and simulation analysis to refine camber gain, roll center height, and anti-squat geometry. The project culminated in the successful completion of a fully functional race car built to Formula SAE standards.
+      </p>
+      <p>
+        You can view technical documentation from the project below:
+      </p>
+      <ul>
+        <li><a href="/assets/docs/YCP_Racing_Suspension_Report.pdf" target="_blank">Suspension Design Report (PDF)</a></li>
+        <li><a href="/assets/docs/YCP_Racing_CAD_Drawings.pdf" target="_blank">Component Drawings (PDF)</a></li>
+      </ul>
+    </section>
+
+    <a class="back" href="/">← Back to Home</a>
+  </main>
 </body>
 </html>
-
